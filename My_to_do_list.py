@@ -1,3 +1,4 @@
+#Создание списка
 def tasck():
     spisok = []
     print("Напиши свои задачи:")
@@ -7,7 +8,7 @@ def tasck():
             break
         spisok.append(task)
     return spisok
-
+# Удаление элмента
 def dell(sp, stroka):
     if stroka in sp:
         ind = sp.index(stroka)
@@ -17,7 +18,7 @@ def dell(sp, stroka):
             return sp
         return sp
     return False
-
+# Добавление элемента
 def ad(sp, stroka):
     if stroka not in sp:
         sp.append(stroka)
@@ -30,13 +31,13 @@ a = input('У тебя есть задачи на сегодня?')
 flag = False
 while True:
     if a == 'да':
-        if not flag:
+        if not flag:# проверка на создан список или нет
             sp = tasck()
             print('Вот твои задачи на сегодня:')
             for i in sp:
                 print(i)
             flag = True
-        shag1 = input()
+        shag1 = input()#Ожидание задачи
         if shag1 == 'сделал':
             c = dell(sp, input())
             if c:
